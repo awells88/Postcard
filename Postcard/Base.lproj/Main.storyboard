@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eKh-fK-8zL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Barcelona-->
+        <scene sceneID="se0-IX-ryS">
+            <objects>
+                <viewController title="Barcelona" id="gVh-eh-fO7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GHL-77-h2E"/>
+                        <viewControllerLayoutGuide type="bottom" id="9OA-lQ-OMZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tXr-Wf-2Wg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-7e-SGn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Barcelona" id="pCh-6Q-JWD">
+                        <barButtonItem key="rightBarButtonItem" title="View Message" id="xvN-nT-h0H">
+                            <connections>
+                                <segue destination="bgi-9k-2DL" kind="show" id="KZ7-Gg-gYH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywh-Vq-mxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pra-VC-l7G">
+            <objects>
+                <viewController id="bgi-9k-2DL" customClass="ViewController" customModule="Postcard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="92w-RL-2zb"/>
+                        <viewControllerLayoutGuide type="bottom" id="98y-Ig-IR8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rj1-KP-eOe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-m9-eIF">
+                                <rect key="frame" x="504" y="81" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="sC1-Aa-Hxt"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVW-bq-sTf">
+                                <rect key="frame" x="16" y="189" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-SP-lmH">
+                                <rect key="frame" x="16" y="271" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07j-F1-pKB">
+                                <rect key="frame" x="16" y="340" width="568" height="30"/>
+                                <state key="normal" title="SendMail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="bgi-9k-2DL" eventType="touchUpInside" id="SIW-jU-iVp"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-qq-RhU">
+                                <rect key="frame" x="16" y="81" width="480" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="07j-F1-pKB" firstAttribute="leading" secondItem="ZyE-SP-lmH" secondAttribute="leading" id="3kP-UQ-Bhr"/>
+                            <constraint firstItem="WYj-m9-eIF" firstAttribute="trailing" secondItem="Rj1-KP-eOe" secondAttribute="trailingMargin" id="4HX-up-Nq4"/>
+                            <constraint firstItem="ZyE-SP-lmH" firstAttribute="trailing" secondItem="qVW-bq-sTf" secondAttribute="trailing" id="5cD-b8-6kZ"/>
+                            <constraint firstItem="qVW-bq-sTf" firstAttribute="trailing" secondItem="WYj-m9-eIF" secondAttribute="trailing" id="7Z7-Un-Bx0"/>
+                            <constraint firstItem="qVW-bq-sTf" firstAttribute="leading" secondItem="Rj1-KP-eOe" secondAttribute="leadingMargin" id="Gnl-Tp-AEP"/>
+                            <constraint firstItem="98y-Ig-IR8" firstAttribute="top" secondItem="WYj-m9-eIF" secondAttribute="bottom" constant="439" id="Y6u-bq-TdN"/>
+                            <constraint firstItem="ZyE-SP-lmH" firstAttribute="leading" secondItem="qVW-bq-sTf" secondAttribute="leading" id="YWl-kn-BYd"/>
+                            <constraint firstItem="07j-F1-pKB" firstAttribute="trailing" secondItem="ZyE-SP-lmH" secondAttribute="trailing" id="aMJ-Oo-JJo"/>
+                            <constraint firstItem="07j-F1-pKB" firstAttribute="top" secondItem="ZyE-SP-lmH" secondAttribute="bottom" constant="39" id="gTM-wO-beg"/>
+                            <constraint firstItem="WYj-m9-eIF" firstAttribute="top" secondItem="92w-RL-2zb" secondAttribute="bottom" constant="17" id="kCE-6R-oEH"/>
+                            <constraint firstItem="ZyE-SP-lmH" firstAttribute="top" secondItem="qVW-bq-sTf" secondAttribute="bottom" constant="52" id="kOh-ge-C9e"/>
+                            <constraint firstItem="qVW-bq-sTf" firstAttribute="top" secondItem="WYj-m9-eIF" secondAttribute="bottom" constant="28" id="y8Q-Rt-mjn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterMessageTextField" destination="ZyE-SP-lmH" id="ehV-JX-OQM"/>
+                        <outlet property="enterNameTextField" destination="qVW-bq-sTf" id="Emq-io-JjD"/>
+                        <outlet property="mailButton" destination="07j-F1-pKB" id="neT-Gm-7hd"/>
+                        <outlet property="messageLabel" destination="qfe-qq-RhU" id="i9g-8W-Az6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGn-8m-Mdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448" y="315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PBf-2U-sR0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eKh-fK-8zL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cti-94-Z8P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gVh-eh-fO7" kind="relationship" relationship="rootViewController" id="GTk-dJ-jNc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slL-G4-dnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="castle.jpg" width="908" height="1000"/>
+    </resources>
+</document>
